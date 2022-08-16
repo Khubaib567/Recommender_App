@@ -1,0 +1,181 @@
+/* This is for hompage page */
+html {
+	scroll-behavior: smooth;
+  }
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #589ed9;
+	font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.wrapper ul{
+	/* width: 1170px;S */
+	margin: auto;
+	max-width: 1250px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+	font-size: large;
+  	padding: 0 20px;
+	
+}
+
+.wrapper .fa-leaf{
+	font-size: 65px;
+	color: white;
+	padding-left: 15px;
+
+}
+
+p{
+	display: block;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+header {
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center ;
+	position: relative; 
+}
+
+section {
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center ;
+	position: relative; 
+}
+
+
+
+.logo {
+	float: left;
+}
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 10% 33%;
+	text-align: center;
+}
+
+
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #0b6ab4;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+
+.welcome-text input[type="text"],[type="email"]{
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.welcome-text textarea{
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	width: 500px;
+	height: 200px;
+	border: none;
+	outline: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.welcome-text input[type="submit"],input[type="reset"]{
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+} 
+
+.welcome-text input[type="submit"],input[type="reset"]:hover {
+	background: #fff;
+	cursor: pointer;
+	color: #333;
+}
+
+
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	img {
+		width: 50%
+	}
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}

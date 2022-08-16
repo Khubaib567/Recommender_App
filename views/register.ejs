@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Registration Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d60331d9ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <script src="main.js"></script> -->
+  </head>
+  <body>
+    <form action="/register" method="POST">
+      <div id="container">
+        <div id="header">
+          <a href="\homepage">
+            <div id="logo">
+              <i class="fa fa-leaf"></i>
+              <p>BeHappy.com</p>
+            </div>
+          </a>
+          <h1>Create Account</h1>
+        </div>
+        <div id="loginform">
+          <div id="containerfields">
+            <input type="name" id="name" name="name" placeholder="Name" />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <input
+              type="password"
+              id="confirmpassword"
+              name="confirmpassword"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <input type="submit" value="Sign Up" />
+        </div>
+        <div id="footer">
+          <p><a href="/login">Login</a> if you have already account?</p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
