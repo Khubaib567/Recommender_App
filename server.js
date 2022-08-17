@@ -15,14 +15,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false })); // this will help to get the user input.
 
 
-app.get("/my-quiz", function (req, res) {
-  res.redirect("http://localhost:3000/");
-});
-
-// if a GET request comes in that is not handled by our /api route, our server will respond with our React app.
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, '../build')));
 
 
 app.post("/setscore", async (req, res) => {
@@ -57,7 +51,15 @@ app.get("/predict", (req, res) => {
   });
 });
 
-app.listen(4000);
+// if a GET request comes in that is not handled by our /api route, our server will respond with our React app.
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+});
+
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 //Connected with mongoodb
 const mongoose = require("mongoose");
