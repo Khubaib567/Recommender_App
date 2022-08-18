@@ -38,12 +38,13 @@ app.get("/predict", (req, res) => {
   var dataToSend;
   // spawn new child process to call the python script
   const python = spawn('python', ['script.py',set_score.score]);
-  // collect data from script
+  // event listener which tells the node.jss when we collect data from script
   python.stdout.on("data", function (data) {
     console.log("Pipe data from python script ...");
     dataToSend = data.toString();
   });
-  // in close event we are sure that stream from child process is closed
+//Here we give 'close' command to event listener to close the child process.
+//This close event will give the status about stream from child process is closed (i.e 0 means closed 1 means not closed)
   python.on("close", (code) => {
     console.log(`child process close all stdio with code ${code}`);
     // send data to browser
