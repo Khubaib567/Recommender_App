@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node":"16.14.0"
+  },
   "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "start": "nodemon --exec babel-node server.js"
   },
   "keywords": [],
   "author": "",
