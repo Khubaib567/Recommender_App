@@ -8,3 +8,7 @@ The idea is to make an **AI-based recommendation app** where i have used **linea
 
 
 
+
+
+https://user-images.githubusercontent.com/49817481/185553806-53a16849-c573-437b-9bc0-76c30e18369a.mp4
+
